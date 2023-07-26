@@ -1,11 +1,10 @@
 .progressBar {
-    max-width: 81.25rem;
+    max-width: 50rem;
     width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid var(--gray-400);
     padding-bottom: 26px;
 }
 
