@@ -1,3 +1,11 @@
+.contentTask {
+    max-width: 81.25rem;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
 .addTask {
     max-width: 736px;
     width: 100%;
