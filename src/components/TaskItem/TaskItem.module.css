@@ -12,7 +12,7 @@
     box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.06);
 }
 
-.taskItem input[type="radio"]{
+.taskItem input[type="checkbox"]{
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -25,8 +25,9 @@
     background: transparent;
     cursor: pointer;
 }
-.taskItem input[type="radio"]:checked{
-    border: 2px solid var(--purple);
+.taskItem input[type="checkbox"]:checked{
+    border: 4px solid var(--gray-500);
+    outline: 2px solid var(--purple);
     background: var(--purple);
 }
 
