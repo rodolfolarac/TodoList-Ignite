@@ -1,12 +1,36 @@
 import { PlusCircle } from "phosphor-react"
 import styles from "./AddTask.module.css"
+import { Task, listTaskType, TaskType }  from "../../types/Task"
 
-export const AddTask = () =>{
+interface AddTaskProps {
+    setListTask: React.Dispatch<React.SetStateAction<listTaskType>>;
+    listTask: listTaskType;
+}
+
+
+export const AddTask: React.FC<AddTaskProps> = ({setListTask, listTask}) =>{
+
+    const handleAddTask = () =>{
+        event?.preventDefault()
+        let valueTask = document.querySelector("input")
+        if(valueTask != null && valueTask.value != ""){
+            const newTask : Task = {
+                content: valueTask.value,
+                isFinite: false
+            }
+            setListTask([...listTask, newTask])
+
+            console.log(listTask)
+            valueTask.value = "";
+        }
+        
+
+    }
     return (
         <section className={styles.contentTask}>
             <form className={styles.addTask}>
                 <input type="text" placeholder="Adicione uma nova tarefa" />
-                <button type="submit">
+                <button type="submit" onClick={handleAddTask}>
                     Criar
                     <PlusCircle size={16} weight="bold" />
                 </button>

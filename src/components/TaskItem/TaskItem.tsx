@@ -1,12 +1,17 @@
 import { Trash } from "phosphor-react"
 import styles from "./TaskItem.module.css"
 
-export const TaskItem = () => {
+import{TaskType} from "../../types/Task"
+
+interface TaskItemProps {
+    task: TaskType;
+}
+
+export const TaskItem: React.FC<TaskItemProps> = ({task}) => {
     return (
         <div className={styles.taskItem}>
             <input type="checkbox"></input>
-            <p>Integer urna interdum massa libero auctor neque turpis 
-                turpis semper. Duis vel sed fames integer.
+            <p>{task.content}
             </p>
 
             <button>

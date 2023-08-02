@@ -1,6 +1,7 @@
 .mainContainer{
     background: var(--gray-600);
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     width: 100vw;
 }
 
