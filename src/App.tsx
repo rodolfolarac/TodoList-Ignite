@@ -22,7 +22,7 @@ export function App() {
         <Header />
         <AddTask listTask = { listTask } setListTask = { setListTask }/>
         
-        <ProgressBar />
+        <ProgressBar listTask = { listTask} />
         <ContentTasks listTask = { listTask } setListTask = { setListTask }/>
       </div>
     
