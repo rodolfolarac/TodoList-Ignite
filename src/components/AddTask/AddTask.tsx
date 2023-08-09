@@ -1,6 +1,8 @@
 import { PlusCircle } from "phosphor-react"
 import styles from "./AddTask.module.css"
-import { Task, listTaskType, TaskType }  from "../../types/Task"
+import { listTaskType, TaskType }  from "../../types/Task"
+// import {v4 as uuidv4 } from "uuid"
+import { SetStateAction } from "react"
 
 interface AddTaskProps {
     setListTask: React.Dispatch<React.SetStateAction<listTaskType>>;
@@ -14,9 +16,9 @@ export const AddTask: React.FC<AddTaskProps> = ({setListTask, listTask}) =>{
         event?.preventDefault()
         let valueTask = document.querySelector("input")
         if(valueTask != null && valueTask.value != ""){
-            const newTask : Task = {
+            const newTask = {
                 content: valueTask.value,
-                isFinite: false
+                isFinished: false
             }
             setListTask([...listTask, newTask])
 

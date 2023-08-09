@@ -52,3 +52,7 @@
 .taskItem button:hover svg {
     color: var(--danger);
 }
+
+.taskItem.finished p {
+    text-decoration: line-through;
+}

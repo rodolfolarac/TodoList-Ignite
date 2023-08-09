@@ -12,8 +12,8 @@ import { TaskType, listTaskType } from "../src/types/Task"
 export function App() {
 
   const [listTask, setListTask  ] = useState<listTaskType>([
-    {"content": "teste 123", "isFinished": true, "id": 1},
-    {"content": "teste 321111111111", "isFinished": false, "id": 2},
+    {"content": "teste 123", "isFinished": false},
+    {"content": "teste 321111111111", "isFinished": false},
   ])
   
 
@@ -23,7 +23,7 @@ export function App() {
         <AddTask listTask = { listTask } setListTask = { setListTask }/>
         
         <ProgressBar />
-        <ContentTasks listTask = { listTask }/>
+        <ContentTasks listTask = { listTask } setListTask = { setListTask }/>
       </div>
     
   )
